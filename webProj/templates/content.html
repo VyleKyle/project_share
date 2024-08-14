@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <nav class="navigation">
+        <ul class="nav-menu">
+            {% for key, value in nav_items.items() %}
+                <li class="nav-item">
+                    {% if value is mapping %}
+                        <span class="dropdown-label">{{ key }}</span>
+                        <ul class="dropdown-menu">
+                            {% for subkey, subvalue in value.items() %}
+                                {% if subvalue is mapping %}
+                                    <li class="nav-item">
+                                        <span class="dropdown-label">{{ subkey }}</span>
+                                        <ul class="dropdown-menu">
+                                            {% for subsubkey, subsubvalue in subvalue.items() %}
+                                                <li>
+                                                    <a href="/{{ subsubvalue }}">{{ subsubkey }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="/{{ subvalue }}">{{ subkey }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <a href="/{{ value }}">{{ key }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <div class="content">
+        {{ content|safe }}
+    </div>
+{% endblock %}
