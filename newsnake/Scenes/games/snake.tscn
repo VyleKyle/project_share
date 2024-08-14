@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtaepkq3ljkxg"]
+
+[ext_resource type="Script" path="res://Scripts/Snake_Test1/Board.gd" id="1_1ltpo"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_1ltpo")

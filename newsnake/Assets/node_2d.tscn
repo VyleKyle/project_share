@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://boyynatrjt3hm"]
+
+[ext_resource type="TileSet" uid="uid://bm388nejqxqxo" path="res://Assets/fortune_tileset.tres" id="1_4ep46"]
+
+[sub_resource type="Curve2D" id="Curve2D_6uqux"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_4ep46")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 262146, 0, 65536, 2, 0, 131072, 2, 0, 196608, 2, 0, 262144, 131074, 0, 262145, 2, 0, 262146, 2, 0, 262147, 2, 0, 262148, 2, 0, 262149, 131074, 0, 196613, 2, 0, 131077, 2, 0, 65541, 2, 0, 6, 2, 0, 65542, 65538, 0, 65545, 131074, 0, 131082, 2, 0, -65530, 2, 0, -131066, 2, 0, -131067, 2, 0, -131068, 2, 0, -131069, 2, 0, -131070, 131074, 0, -65535, 2, 0, 196619, 2, 0, 262154, 2, 0, 327689, 196610, 0, 393224, 2, 0, 393223, 2, 0, 327686, 2, 0, 65544, 2, 0, 65543, 2, 0)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_6uqux")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(420, 94)
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D"]
+position = Vector2(350, 95)
+
+[node name="PathFollow2D3" type="PathFollow2D" parent="Path2D"]
+position = Vector2(351, 152)

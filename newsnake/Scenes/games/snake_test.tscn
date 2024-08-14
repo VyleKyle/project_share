@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6ykdoeku6t7x"]
+
+[ext_resource type="Script" path="res://Scripts/Snake_Test/Board.gd" id="1_kl2k0"]
+[ext_resource type="Script" path="res://Scripts/Snake_Test/Snake.gd" id="2_6oasd"]
+
+[node name="Board" type="Node2D"]
+visibility_layer = 2
+script = ExtResource("1_kl2k0")
+
+[node name="Snake" type="Node2D" parent="."]
+script = ExtResource("2_6oasd")

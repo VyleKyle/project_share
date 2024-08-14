@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnlyl8v0c3xwa"]
+
+[ext_resource type="Texture2D" uid="uid://08iiovkhp5e1" path="res://Assets/gold_icon.png" id="1_27by6"]
+[ext_resource type="Script" path="res://Scripts/Prefabs/gold_bar_sprite.gd" id="2_r3tr6"]
+
+[node name="gold_bar_sprite" type="Sprite2D"]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_27by6")
+script = ExtResource("2_r3tr6")
+
+[node name="Timer" type="Timer" parent="."]
